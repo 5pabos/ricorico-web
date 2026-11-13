@@ -19,9 +19,12 @@
   var PASO = 1100, n = escenas.length, objetivo = 0, actual = 0;
   raiz.classList.add('activo');
 
+  var corriendo = false;
+  function despertar() { if (!corriendo) { corriendo = true; requestAnimationFrame(pintar); } }
   function leer() {
     var total = raiz.offsetHeight - innerHeight;
     objetivo = Math.min(1, Math.max(0, -raiz.getBoundingClientRect().top / total));
+    despertar();
   }
   function pintar() {
     actual += (objetivo - actual) * 0.12; // suaviza: sin saltos aunque el scroll sea brusco
@@ -35,9 +38,20 @@
       e.style.visibility = op < 0.02 ? 'hidden' : 'visible';
     });
     if (pista) pista.style.opacity = actual < 0.03 ? 1 : 0;
-    requestAnimationFrame(pintar);
+    // El bucle solo sigue mientras el suavizado no ha llegado al objetivo.
+    if (actual !== objetivo) requestAnimationFrame(pintar); else corriendo = false;
   }
   addEventListener('scroll', leer, { passive: true });
-  addEventListener('resize', leer);
-  leer(); actual = objetivo; pintar();
+  addEventListener('resize', leer, { passive: true });
+  leer(); actual = objetivo; corriendo = true; pintar();
+
+  // La órbita de muslitos se pausa cuando no se ve (ahorra batería y GPU).
+  var orbita = document.querySelector('.orbita');
+  if (orbita && 'IntersectionObserver' in window) {
+    var movil = orbita.querySelectorAll('.anillo, .muslo img');
+    new IntersectionObserver(function (e) {
+      var estado = e[0].isIntersecting ? 'running' : 'paused';
+      for (var k = 0; k < movil.length; k++) movil[k].style.animationPlayState = estado;
+    }).observe(orbita);
+  }
 })();

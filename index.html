@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RicoRico: escanea tu ticket y descubre qué cocinar</title>
 <meta name="description" content="RicoRico lee el ticket de la compra en tu móvil, lleva el inventario de tu cocina y te propone recetas con lo que tienes. Sin cuentas.">
@@ -20,12 +22,16 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Icono de RicoRico y la frase: escanea tu ticket y descubre qué cocinar con lo que tienes">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RicoRico: escanea tu ticket y descubre qué cocinar">
+<meta name="twitter:description" content="Lee el ticket en tu móvil, lleva el inventario de tu cocina y te propone recetas con lo que tienes. Sin cuentas.">
+<meta name="twitter:image" content="https://5pabos.github.io/ricorico-web/img/compartir.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RicoRico","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"es","url":"https://5pabos.github.io/ricorico-web/","image":"https://5pabos.github.io/ricorico-web/img/icono-192.png","description":"Escanea el ticket de la compra, lleva el inventario de tu cocina y descubre qué cocinar con lo que tienes.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RicoRico","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"es","url":"https://5pabos.github.io/ricorico-web/","image":"https://5pabos.github.io/ricorico-web/img/icono-192.png","description":"Escanea el ticket de la compra, lleva el inventario de tu cocina y descubre qué cocinar con lo que tienes."}
 </script>
 <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
+<a class="saltar" href="#principal">Saltar al contenido</a>
 <header class="cabecera">
   <div class="contenedor">
     <a class="marca" href="./">RicoRico</a>
@@ -37,10 +43,10 @@
   </div>
 </header>
 
-<main>
+<main id="principal">
   <section class="portada">
     <div class="contenedor">
-      <img src="img/icono-192.png" width="96" height="96" alt="Icono de RicoRico: un muslo de pollo">
+      <img src="img/icono-192.png" width="96" height="96" fetchpriority="high" decoding="async" alt="Icono de RicoRico: un muslo de pollo">
       <h1>RicoRico</h1>
       <p class="lema">Escanea tu ticket y descubre qué cocinar con lo que tienes</p>
       <!-- Cuando la app esté publicada: cambiar este <span> por <a class="cta" href="ENLACE-DE-GOOGLE-PLAY">Descargar en Google Play</a> -->
@@ -104,7 +110,7 @@
                 <span class="chip c3 ok">Precio estimado ≈ 24,50 €</span>
               </div>
               <h3>Lista de la compra con precio estimado</h3>
-              <p>Lo que falta de tus recetas, con un precio orientativo por supermercado.</p>
+              <p>Lo que falta de tus recetas, con un precio orientativo.</p>
             </div>
           </article>
         </div>
@@ -119,17 +125,17 @@
         <span class="pildora">Recetas con foto</span>
         <div class="escena3d">
           <div class="abanico">
-            <figure class="plato" style="--i:0"><img src="img/recetas-portada/1.jpg" width="360" height="480" loading="lazy" alt="Tortilla de patatas"><figcaption>Tortilla de patatas · 40 min</figcaption></figure>
-            <figure class="plato" style="--i:1"><img src="img/recetas-portada/3.jpg" width="360" height="480" loading="lazy" alt="Macarrones con tomate"><figcaption>Macarrones con tomate · 20 min</figcaption></figure>
-            <figure class="plato" style="--i:2"><img src="img/recetas-portada/65.jpg" width="360" height="480" loading="lazy" alt="Paella sencilla de pollo"><figcaption>Paella sencilla · 50 min</figcaption></figure>
-            <figure class="plato" style="--i:3"><img src="img/recetas-portada/51.jpg" width="360" height="480" loading="lazy" alt="Pollo al curry"><figcaption>Pollo al curry · 35 min</figcaption></figure>
-            <figure class="plato" style="--i:4"><img src="img/recetas-portada/129.jpg" width="360" height="480" loading="lazy" alt="Tortitas americanas"><figcaption>Tortitas americanas · 20 min</figcaption></figure>
-            <figure class="plato" style="--i:5"><img src="img/recetas-portada/132.jpg" width="360" height="480" loading="lazy" alt="Tacos de pollo"><figcaption>Tacos de pollo · 25 min</figcaption></figure>
-            <figure class="plato" style="--i:6"><img src="img/recetas-portada/138.jpg" width="360" height="480" loading="lazy" alt="Shakshuka, huevos en salsa de tomate"><figcaption>Shakshuka · 25 min</figcaption></figure>
+            <figure class="plato" style="--i:0"><img src="img/recetas-portada/1.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tortilla de patatas"><figcaption>Tortilla de patatas · 40 min</figcaption></figure>
+            <figure class="plato" style="--i:1"><img src="img/recetas-portada/3.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Macarrones con tomate"><figcaption>Macarrones con tomate · 20 min</figcaption></figure>
+            <figure class="plato" style="--i:2"><img src="img/recetas-portada/65.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Paella sencilla de pollo"><figcaption>Paella sencilla · 50 min</figcaption></figure>
+            <figure class="plato" style="--i:3"><img src="img/recetas-portada/51.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Pollo al curry"><figcaption>Pollo al curry · 35 min</figcaption></figure>
+            <figure class="plato" style="--i:4"><img src="img/recetas-portada/129.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tortitas americanas"><figcaption>Tortitas americanas · 20 min</figcaption></figure>
+            <figure class="plato" style="--i:5"><img src="img/recetas-portada/132.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tacos de pollo"><figcaption>Tacos de pollo · 25 min</figcaption></figure>
+            <figure class="plato" style="--i:6"><img src="img/recetas-portada/138.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Shakshuka, huevos en salsa de tomate"><figcaption>Shakshuka · 25 min</figcaption></figure>
           </div>
         </div>
       </div>
-      <h3 class="titulo-grande">Cocina lo que ya tienes en casa</h3>
+      <h2 class="titulo-grande">Cocina lo que ya tienes en casa</h2>
       <p class="sub-grande">Más de 150 recetas con foto, para 1 a 5 personas, que se ajustan a tus cantidades.</p>
     </div>
   </section>
