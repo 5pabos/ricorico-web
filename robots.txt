@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://5pabos.github.io/ricorico-web/sitemap.xml

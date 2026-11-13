@@ -45,7 +45,7 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 .funciones p { margin: 0; color: var(--apagado); font-size: .95rem; }
 
 .capturas-fondo { background: var(--mantequilla); }
-.capturas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.capturas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 190px)); justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .capturas figure { margin: 0; text-align: center; }
 .hueco { aspect-ratio: 9 / 19; border: 1px dashed var(--mostaza); border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; color: var(--apagado); font-size: .85rem; padding: .5rem; }
 .capturas figcaption { margin-top: .4rem; font-size: .9rem; color: var(--apagado); }
