@@ -28,15 +28,16 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 .menu a { color: var(--apagado); text-decoration: none; padding: .35rem 0; }
 .menu a:hover { color: var(--tinta); text-decoration: underline; }
 
-.portada { text-align: center; padding: 2rem 0 2.5rem; }
+.portada { text-align: center; padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(1.5rem, 3vw, 2.5rem); }
 .portada img { width: 96px; height: 96px; border-radius: 22px; border: 2px solid var(--tinta); }
 .portada h1 { font-size: clamp(2rem, 6vw, 2.75rem); margin: .8rem 0 .3rem; }
 .lema { font-family: var(--serif); font-size: clamp(1.15rem, 3.4vw, 1.5rem); max-width: 28ch; margin: 0 auto 1.4rem; }
 .cta { display: inline-block; background: var(--terracota); color: #fff; font-weight: 600; font-size: 1.05rem; padding: .8rem 1.8rem; border-radius: 2rem; text-decoration: none; }
 .pie-cta { color: var(--apagado); font-size: .9rem; margin: .75rem 0 0; }
 
-.seccion { padding: 2rem 0; }
-.seccion > .contenedor > h2 { text-align: center; font-size: 1.6rem; margin-bottom: 1.2rem; }
+.seccion { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.seccion > .contenedor > h2 { text-align: center; font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-bottom: 1.4rem; }
+#contacto { padding-bottom: 1.5rem; }
 .funciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .funciones li { background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 1.1rem; }
 .icono { width: 44px; height: 44px; border-radius: 50%; background: var(--menta); display: grid; place-items: center; margin-bottom: .6rem; }
@@ -45,7 +46,7 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 .funciones p { margin: 0; color: var(--apagado); font-size: .95rem; }
 
 .capturas-fondo { background: var(--mantequilla); }
-.capturas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 190px)); justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.capturas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 220px)); justify-content: center; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .capturas figure { margin: 0; text-align: center; }
 .hueco { aspect-ratio: 9 / 19; border: 1px dashed var(--mostaza); border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; color: var(--apagado); font-size: .85rem; padding: .5rem; }
 .capturas figcaption { margin-top: .4rem; font-size: .9rem; color: var(--apagado); }
@@ -64,6 +65,8 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 
 /* ---------- Recorrido con cámara 3D (sin vídeo, sin librerías) ---------- */
 /* Sin JavaScript o con «reducir movimiento»: cada escena es una tarjeta normal. */
+.titulo-escenario { text-align: center; font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin: 0 auto 1.2rem; width: min(960px, 100% - 2rem); }
+#funciones { padding-top: clamp(1.5rem, 3vw, 2.5rem); padding-bottom: 0; }
 .recorrido .mundo { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; width: min(960px, 100% - 2rem); margin: 0 auto; }
 .escena .panel { background: #fff; border: 1px solid var(--borde); border-radius: 20px; padding: 1rem; }
 .escena h3 { font-size: 1.1rem; margin: .8rem 0 .25rem; }
@@ -85,7 +88,7 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 .arte-nevera svg { width: 58%; fill: none; stroke: var(--azul); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .arte-recetas .c1, .arte-recetas .c2, .arte-recetas .c3 { left: 8%; }
 .arte-recetas .c2 { left: 22%; } .arte-recetas .c3 { left: 14%; }
-.arte-lista .fila { position: absolute; left: 8%; display: flex; align-items: center; gap: .7em; background: #fff; border-radius: 10px; padding: .5em .9em; font-weight: 600; width: 58%; }
+.arte-lista .fila { position: absolute; left: 8%; display: flex; align-items: center; gap: .7em; background: #fff; border-radius: 10px; padding: .5em .9em; font-weight: 600; width: 84%; box-shadow: 0 4px 12px rgba(18,48,58,.1); }
 .arte-lista .fila i { width: 1em; height: 1em; border: 2px solid var(--turquesa); border-radius: 4px; flex: none; }
 .arte-lista .f1 { top: 10%; } .arte-lista .f2 { top: 34%; } .arte-lista .f3 { top: 58%; }
 .arte-lista .c3 { left: 24%; top: 82%; }
@@ -95,20 +98,29 @@ a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-of
 .recorrido.activo .escenario { position: sticky; top: 0; height: 100vh; overflow: hidden; perspective: 900px; perspective-origin: 50% 42%;
   background: radial-gradient(60% 55% at 50% 45%, #fff 0%, var(--crema) 70%); }
 .recorrido.activo .mundo { position: absolute; inset: 0; display: block; width: auto; margin: 0; transform-style: preserve-3d; will-change: transform; }
-.recorrido.activo .escena { position: absolute; inset: 0; display: grid; place-items: center; transform-style: preserve-3d; will-change: opacity;
+.recorrido.activo .titulo-escenario { position: absolute; z-index: 3; top: clamp(1.2rem, 5vh, 3rem); left: 0; right: 0; margin: 0 auto; font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
+.recorrido.activo .escena { position: absolute; inset: 0; display: grid; place-items: center; padding-top: clamp(3.5rem, 10vh, 6.5rem); transform-style: preserve-3d; will-change: opacity;
   transform: translate3d(var(--x, 0), 0, calc(var(--i) * -1100px)) rotateY(var(--r, 0deg)); }
-.recorrido.activo .panel { width: min(440px, 88vw); padding: 1.2rem; box-shadow: 0 30px 60px -20px rgba(18,48,58,.28); transform-style: preserve-3d; }
+.recorrido.activo .panel { width: min(440px, 88vw); padding: 1.2rem; border-radius: 24px; background: linear-gradient(160deg, #fff 0%, #FBFFF7 100%);
+  box-shadow: 0 40px 80px -28px rgba(18,48,58,.38), 0 2px 0 rgba(255,255,255,.8) inset; transform-style: preserve-3d; }
+.recorrido.activo .arte { box-shadow: inset 0 0 0 1px rgba(138,97,0,.12); }
 .recorrido.activo .chip { transform: translateZ(40px); box-shadow: 0 8px 18px rgba(18,48,58,.15); }
 .recorrido.activo .arte-escaner .ticket { transform: translateZ(14px); }
 .recorrido.activo .escena h3 { font-size: 1.35rem; }
 .recorrido.activo .escena p { font-size: 1.02rem; }
+@media (min-width: 900px) {
+  .recorrido.activo .panel { width: min(1100px, 84vw, 150vh); display: grid; grid-template-columns: 1.15fr 1fr; gap: 0 2.4rem; align-items: center; padding: 1.6rem; }
+  .recorrido.activo .panel .arte { grid-row: 1 / span 2; }
+  .recorrido.activo .escena h3 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); margin: 0 0 .5rem; align-self: end; }
+  .recorrido.activo .escena p { font-size: clamp(1.05rem, 1.4vw, 1.25rem); align-self: start; }
+}
 .recorrido.activo .pista { display: block; position: absolute; bottom: 1.4rem; left: 0; right: 0; text-align: center; color: var(--apagado); font-size: .9rem; transition: opacity .4s; }
 
 /* Tarjeta grande de recetas: collage inclinado en 3D */
-.tarjeta-grande { position: relative; background: #F3F1D6; border-radius: 28px; height: clamp(300px, 46vw, 440px); overflow: hidden; }
+.tarjeta-grande { position: relative; background: #F3F1D6; border-radius: 28px; height: clamp(300px, 46vw, 460px); overflow: hidden; }
 .pildora { position: absolute; z-index: 2; left: 1.1rem; top: 1.1rem; background: #fff; color: var(--tinta); border-radius: 999px; padding: .45rem .9rem; font: 700 .72rem/1 var(--sans); letter-spacing: .04em; text-transform: uppercase; }
 .escena3d { position: absolute; inset: 0; perspective: 1200px; perspective-origin: 50% 40%; }
-.abanico { position: absolute; left: 44%; top: 54%; width: 0; height: 0; transform-style: preserve-3d; transform: scale(var(--escala, 1)) rotateX(16deg) rotateY(-30deg) rotateZ(3deg); }
+.abanico { position: absolute; left: 44%; top: 58%; width: 0; height: 0; transform-style: preserve-3d; transform: scale(var(--escala, .96)) rotateX(16deg) rotateY(-30deg) rotateZ(3deg); }
 .plato { position: absolute; width: 190px; height: 254px; margin: -127px 0 0 -95px; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 24px 40px -18px rgba(18,48,58,.45);
   transform: translate3d(calc((var(--i) - 3) * 112px), calc((var(--i) - 3) * -10px), calc(var(--i) * 18px));
   transition: transform .7s cubic-bezier(.2,.7,.2,1) calc(var(--i) * 70ms), opacity .5s calc(var(--i) * 70ms); }
