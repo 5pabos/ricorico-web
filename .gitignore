@@ -1,0 +1,11 @@
+# Nada privado en un repositorio público
+.env
+*.pem
+*.jks
+*.key
+keystore.properties
+codigos_*
+*.csv
+Thumbs.db
+.DS_Store
+node_modules/

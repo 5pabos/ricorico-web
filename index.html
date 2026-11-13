@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RicoRico: escanea tu ticket y descubre qué cocinar</title>
+<meta name="description" content="RicoRico lee el ticket de la compra en tu móvil, lleva el inventario de tu cocina y te propone recetas con lo que tienes. Sin cuentas.">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="./">RicoRico</a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#funciones">Funciones</a>
+      <a href="#capturas">Capturas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="portada">
+    <div class="contenedor">
+      <img src="img/icono-192.png" width="96" height="96" alt="Icono de RicoRico: un muslo de pollo">
+      <h1>RicoRico</h1>
+      <p class="lema">Escanea tu ticket y descubre qué cocinar con lo que tienes</p>
+      <!-- Cuando la app esté publicada: cambiar este <span> por <a class="cta" href="ENLACE-DE-GOOGLE-PLAY">Descargar en Google Play</a> -->
+      <span class="cta" role="note">Muy pronto en Google Play</span>
+      <p class="pie-cta">Sin cuentas · Todo se guarda en tu móvil</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="funciones">
+    <div class="contenedor">
+      <h2>Lo que hace por ti</h2>
+      <ul class="funciones">
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z M12 16.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/></svg></div>
+          <h3>Escanea tu ticket</h3>
+          <p>La app lee el ticket en tu móvil, añade los productos y borra la foto.</p>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z M6 10h12 M9 6.5v1.5 M9 13v3"/></svg></div>
+          <h3>Inventario que se actualiza solo</h3>
+          <p>Nevera, congelador y despensa con cuenta atrás de caducidad y avisos.</p>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17A4 4 0 0 1 6 9.2 5 5 0 0 1 12 5a5 5 0 0 1 6 4.2 4 4 0 0 1-1 7.8 M7 17v3h10v-3 M7 17h10"/></svg></div>
+          <h3>Recetas con lo que tienes</h3>
+          <p>Más de 150 recetas con foto, ajustadas a las personas y a tus cantidades.</p>
+        </li>
+        <li>
+          <div class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l1.9 10.2a1 1 0 0 0 1 .8h8.6a1 1 0 0 0 1-.8L19.5 8H6 M9.5 19.5a.5.5 0 1 0 1 0 .5.5 0 1 0-1 0 M16.5 19.5a.5.5 0 1 0 1 0 .5.5 0 1 0-1 0"/></svg></div>
+          <h3>Lista de la compra con precio estimado</h3>
+          <p>Lo que falta de tus recetas, con un precio orientativo por supermercado.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion capturas-fondo" id="capturas">
+    <div class="contenedor">
+      <h2>Así se ve</h2>
+      <ul class="capturas">
+        <!-- Sustituir cada .hueco por <img src="img/capturas/NOMBRE.webp" width="270" height="570" loading="lazy" alt="DESCRIPCIÓN"> -->
+        <li><figure><div class="hueco">Captura 01-inventario</div><figcaption>Inventario</figcaption></figure></li>
+        <li><figure><div class="hueco">Captura 02-recetas</div><figcaption>Recetas</figcaption></figure></li>
+        <li><figure><div class="hueco">Captura 03-lista-compra</div><figcaption>Lista de la compra</figcaption></figure></li>
+        <li><figure><div class="hueco">Captura 04-escaner</div><figcaption>Escáner de tickets</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="contacto">
+    <div class="contenedor" style="text-align:center">
+      <h2>Contacto</h2>
+      <p>¿Dudas, ideas o algo que no funciona? Escríbenos:
+        <a class="correo" data-u="appricorico" data-d="gmail.com" href="#contacto">appricorico (arroba) gmail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <nav aria-label="Información legal">
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Política de privacidad</a>
+      <a class="correo" data-u="appricorico" data-d="gmail.com" data-texto="1" href="#contacto">Contacto</a>
+    </nav>
+    <p>Índices de precios: OCU, estudio de supermercados 2026</p>
+  </div>
+</footer>
+<script src="js/contacto.js" defer></script>
+</body>
+</html>

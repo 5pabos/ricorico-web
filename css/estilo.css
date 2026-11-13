@@ -1,0 +1,63 @@
+/* Colores y estilo de la app (paleta #281). Sin fuentes ni recursos externos: tipografía del sistema. */
+:root {
+  --crema: #FFFBE6;
+  --tinta: #12303A;
+  --apagado: #3F5A55;
+  --azul: #00769A;
+  --turquesa: #00796B;
+  --menta: #A9DDB8;
+  --mantequilla: #FFEDA5;
+  --mostaza: #8A6100;
+  --terracota: #BF4F2A;
+  --borde: #CFE0D5;
+  --serif: Georgia, "Noto Serif", "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--crema); color: var(--tinta); font: 1rem/1.6 var(--sans); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.2; margin: 0 0 .5em; }
+a { color: var(--azul); }
+a:focus-visible, .cta:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; border-radius: 4px; }
+.contenedor { width: min(960px, 100% - 2rem); margin-inline: auto; }
+
+.cabecera { padding: .9rem 0; }
+.cabecera .contenedor { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.marca { font-family: var(--serif); font-size: 1.15rem; color: var(--tinta); text-decoration: none; font-weight: 500; }
+.menu { display: flex; gap: 1.25rem; font-size: .95rem; }
+.menu a { color: var(--apagado); text-decoration: none; padding: .35rem 0; }
+.menu a:hover { color: var(--tinta); text-decoration: underline; }
+
+.portada { text-align: center; padding: 2rem 0 2.5rem; }
+.portada img { width: 96px; height: 96px; border-radius: 22px; border: 2px solid var(--tinta); }
+.portada h1 { font-size: clamp(2rem, 6vw, 2.75rem); margin: .8rem 0 .3rem; }
+.lema { font-family: var(--serif); font-size: clamp(1.15rem, 3.4vw, 1.5rem); max-width: 28ch; margin: 0 auto 1.4rem; }
+.cta { display: inline-block; background: var(--terracota); color: #fff; font-weight: 600; font-size: 1.05rem; padding: .8rem 1.8rem; border-radius: 2rem; text-decoration: none; }
+.pie-cta { color: var(--apagado); font-size: .9rem; margin: .75rem 0 0; }
+
+.seccion { padding: 2rem 0; }
+.seccion > .contenedor > h2 { text-align: center; font-size: 1.6rem; margin-bottom: 1.2rem; }
+.funciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.funciones li { background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 1.1rem; }
+.icono { width: 44px; height: 44px; border-radius: 50%; background: var(--menta); display: grid; place-items: center; margin-bottom: .6rem; }
+.icono svg { width: 24px; height: 24px; fill: none; stroke: #00391F; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.funciones h3 { font-size: 1.05rem; margin: 0 0 .25rem; }
+.funciones p { margin: 0; color: var(--apagado); font-size: .95rem; }
+
+.capturas-fondo { background: var(--mantequilla); }
+.capturas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.capturas figure { margin: 0; text-align: center; }
+.hueco { aspect-ratio: 9 / 19; border: 1px dashed var(--mostaza); border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; color: var(--apagado); font-size: .85rem; padding: .5rem; }
+.capturas figcaption { margin-top: .4rem; font-size: .9rem; color: var(--apagado); }
+
+.pie { padding: 1.6rem 0 2rem; text-align: center; color: var(--apagado); font-size: .92rem; }
+.pie nav { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: .5rem; }
+.pie a { color: var(--azul); }
+
+/* páginas de texto (aviso legal, privacidad) */
+.texto { max-width: 70ch; padding: 1.5rem 0 2.5rem; }
+.texto h1 { font-size: 2rem; }
+.texto h2 { font-size: 1.3rem; margin-top: 1.8em; }
+.pendiente { background: var(--mantequilla); border-radius: 4px; padding: 0 .25em; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
