@@ -10,7 +10,7 @@ nueva = sys.argv[1].strip().rstrip("/") if len(sys.argv) > 1 else sys.exit("Uso:
 if not nueva.startswith("https://"):
     sys.exit("La dirección tiene que empezar por https://")
 cambiados = 0
-for f in list(raiz.glob("*.html")) + [raiz / "sitemap.xml", raiz / "robots.txt"]:
+for f in list(raiz.glob("*.html")) + list(raiz.glob("recetas/*.html")) + [raiz / "sitemap.xml", raiz / "robots.txt"]:
     t = f.read_text(encoding="utf8")
     if actual in t:
         f.write_text(t.replace(actual, nueva), encoding="utf8")
