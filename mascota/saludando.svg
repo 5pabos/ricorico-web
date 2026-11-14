@@ -1,38 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 0 92 98" width="460" height="490" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 124" width="432" height="496" role="img" aria-labelledby="t">
   <title id="t">La mascota de RicoRico, un muslito de pollo con gorro de cocinero, saludando</title>
-  <!-- Colores y trazo del icono de la app: contorno #23395B, muslo #E0913F, brillo #F6C27A, hueso y gorro #FFF8E7 -->
-  <g stroke="#23395B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Piernas: el hueso; las dos puntas son los pies -->
-    <path d="M51,66 L49,80" fill="none" stroke-width="6.4"/>
-    <path d="M57,66 L59,80" fill="none" stroke-width="6.4"/>
-    <path d="M51,66 L49,80" fill="none" stroke="#FFF8E7" stroke-width="2.4"/>
-    <path d="M57,66 L59,80" fill="none" stroke="#FFF8E7" stroke-width="2.4"/>
-    <circle cx="48" cy="86" r="5.5" fill="#FFF8E7"/>
-    <circle cx="60" cy="86" r="5.5" fill="#FFF8E7"/>
-    <!-- Brazo que saluda (arriba, a la derecha) y brazo relajado (a la izquierda) -->
-    <path d="M73,42 C81,40 85,34 86,27" fill="none"/>
-    <circle cx="86.5" cy="23.5" r="4.6" fill="#FFF8E7"/>
-    <path d="M35,44 C29,48 27,54 27,59" fill="none"/>
-    <circle cx="27" cy="62" r="4.6" fill="#FFF8E7"/>
-    <!-- Cuerpo: el muslo -->
-    <path d="M54,18 C72,18 80,32 74,46 C70,56 62,62 58,66 L50,66 C46,62 38,56 34,46 C28,32 36,18 54,18 Z" fill="#E0913F"/>
-    <!-- Gorro de cocinero -->
-    <path d="M42,19 C37,18 36,10 42,9 C43,3 52,2 54,6 C57,2 65,3 66,9 C72,10 71,18 66,19 Z" fill="#FFF8E7"/>
-    <path d="M42,19 L66,19 L65,24 C60,26 48,26 43,24 Z" fill="#FFF8E7"/>
+  <!-- Mismos colores que el icono de la app: contorno #23395B, muslo #E0913F, brillo #F6C27A, hueso y gorro #FFF8E7 -->
+  <ellipse cx="50" cy="117" rx="17" ry="2.6" fill="#23395B" opacity=".12"/>
+  <g stroke="#23395B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Pierna: el hueso, con las dos puntas como pies -->
+    <rect x="46.2" y="88" width="7.6" height="17" rx="3.4" fill="#FFF8E7"/>
+    <circle cx="45.6" cy="109" r="5.6" fill="#FFF8E7"/>
+    <circle cx="54.4" cy="109" r="5.6" fill="#FFF8E7"/>
+    <path d="M47.4,104.5 L52.6,104.5" fill="none" stroke="#FFF8E7" stroke-width="3.6"/>
+    <!-- Brazos finos con manos redondas: uno saluda, otro descansa -->
+    <path d="M75.5,64 C84,60 88,52 88.4,44" fill="none"/>
+    <circle cx="88.4" cy="40.6" r="4.3" fill="#E0913F"/>
+    <path d="M24.5,66 C17,70 14.4,76 14.4,82" fill="none"/>
+    <circle cx="14.4" cy="85.4" r="4.3" fill="#E0913F"/>
+    <!-- Cuerpo: el muslo, en forma de huevo -->
+    <path d="M50,31 C70,31 78.5,49 76.5,65 C74.5,80 63,90 50,92 C37,90 25.5,80 23.5,65 C21.5,49 30,31 50,31 Z" fill="#E0913F"/>
+    <!-- Gorro de cocinero: cúpula y banda -->
+    <circle cx="41.6" cy="20" r="7.6" fill="#FFF8E7"/>
+    <circle cx="58.4" cy="20" r="7.6" fill="#FFF8E7"/>
+    <circle cx="50" cy="14" r="9" fill="#FFF8E7"/>
+    <circle cx="41.6" cy="20" r="5.6" fill="#FFF8E7" stroke="none"/>
+    <circle cx="58.4" cy="20" r="5.6" fill="#FFF8E7" stroke="none"/>
+    <rect x="37" y="25.5" width="26" height="10" rx="3.4" fill="#FFF8E7"/>
   </g>
   <!-- Brillo suave del muslo -->
-  <path d="M39,36 C40,31 44,28 49,27.4" fill="none" stroke="#F6C27A" stroke-width="3" stroke-linecap="round"/>
-  <!-- Cara: ojos ovalados con brillo, mejillas y sonrisa de una línea -->
-  <ellipse cx="47.5" cy="39" rx="2.3" ry="3.1" fill="#23395B"/>
-  <ellipse cx="60.5" cy="39" rx="2.3" ry="3.1" fill="#23395B"/>
-  <circle cx="48.2" cy="37.8" r=".8" fill="#fff"/>
-  <circle cx="61.2" cy="37.8" r=".8" fill="#fff"/>
-  <circle cx="42.5" cy="46" r="3.1" fill="#F4A6A6" opacity=".85"/>
-  <circle cx="65.5" cy="46" r="3.1" fill="#F4A6A6" opacity=".85"/>
-  <path d="M49.5,47.4 Q54,51.6 58.5,47.4" fill="none" stroke="#23395B" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M62,43 C67,46 70,51 70,56" fill="none" stroke="#F6C27A" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Cara: ojos ovalados con brillo, mejillas redondas y sonrisa de una línea -->
+  <ellipse cx="42" cy="61" rx="2.7" ry="3.6" fill="#23395B"/>
+  <ellipse cx="58" cy="61" rx="2.7" ry="3.6" fill="#23395B"/>
+  <circle cx="42.9" cy="59.6" r=".95" fill="#fff"/>
+  <circle cx="58.9" cy="59.6" r=".95" fill="#fff"/>
+  <circle cx="35.4" cy="68.6" r="3.9" fill="#F4A6A6" opacity=".9"/>
+  <circle cx="64.6" cy="68.6" r="3.9" fill="#F4A6A6" opacity=".9"/>
+  <path d="M44.2,68.8 Q50,75 55.8,68.8" fill="none" stroke="#23395B" stroke-width="1.9" stroke-linecap="round"/>
   <!-- Rayitas del saludo -->
-  <g fill="none" stroke="#23395B" stroke-width="1.5" stroke-linecap="round">
-    <path d="M93,20 Q96,23.5 93,27"/>
-    <path d="M97,17 Q102,23.5 97,30"/>
+  <g fill="none" stroke="#23395B" stroke-width="1.6" stroke-linecap="round">
+    <path d="M95,36.5 Q98.4,40.6 95,44.8"/>
+    <path d="M98.6,33.4 Q103,40.6 98.6,48"/>
   </g>
 </svg>
