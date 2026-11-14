@@ -20,7 +20,7 @@
 .fondo { background: #FFF3C4; }
 .seccion { padding: clamp(2rem, 5vw, 3.5rem) 0; }
 .seccion h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
-.sub { color: var(--apagado); margin: 0 0 1rem; }
+.sub { color: var(--apagado); margin: 0 0 1rem; text-align: center; }
 .centro { text-align: center; }
 .centro img { max-width: 100%; height: auto; border: 0; border-radius: 0; }
 .estrecho { max-width: 680px; }
