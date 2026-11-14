@@ -1,0 +1,43 @@
+/* Portada nueva (Rico). Se carga después de estilo.css. Sin recursos externos. */
+.menu { align-items: center; }
+.cta-mini { font-size: .85rem; padding: .45rem 1rem; }
+.pronto { font-size: .85em; color: var(--mostaza); font-weight: 500; }
+.portada { text-align: left; padding: clamp(1rem, 3vw, 2.5rem) 0 1rem; }
+.hero { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.hero-texto { flex: 1 1 340px; }
+.portada h1 { font-size: clamp(2rem, 6vw, 3.1rem); margin: 0 0 .5rem; }
+.lema { margin: 0 0 1.4rem; max-width: 30ch; }
+.pie-cta { max-width: 46ch; }
+.hero-rico { flex: 0 1 260px; text-align: center; margin-inline: auto; }
+.hero-rico img { width: min(216px, 70vw); height: auto; border: 0; border-radius: 0; }
+.globo { display: inline-block; background: #fff; border: 2px solid var(--tinta); border-radius: 16px; padding: .5rem .9rem; margin: 0 0 .4rem; font-family: var(--serif); font-size: 1rem; }
+.carrusel { list-style: none; margin: 1.5rem 0 0; padding: .5rem 0 1rem; display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.carrusel li { flex: 0 0 auto; scroll-snap-align: center; }
+.movil { margin: 0; text-align: center; font-size: .85rem; color: var(--apagado); }
+.pantalla { width: 190px; height: 390px; border: 6px solid var(--tinta); border-radius: 28px; background: var(--mantequilla); display: flex; align-items: center; justify-content: center; margin-bottom: .4rem; overflow: hidden; }
+.pantalla img { width: 120px; height: auto; border: 0; border-radius: 0; }
+.pantalla .captura { width: 100%; height: 100%; object-fit: cover; }
+.fondo { background: #FFF3C4; }
+.seccion { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+.seccion h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+.sub { color: var(--apagado); margin: 0 0 1rem; }
+.centro { text-align: center; }
+.centro img { max-width: 100%; height: auto; border: 0; border-radius: 0; }
+.estrecho { max-width: 680px; }
+.situaciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; align-items: start; }
+details { background: #fff; border: 1.5px solid var(--borde); border-radius: 14px; padding: .8rem 1rem; }
+details[open] { border-color: var(--turquesa); }
+summary { cursor: pointer; font-weight: 600; min-height: 32px; }
+details p { margin: .5rem 0 0; color: var(--apagado); }
+.pasos { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center; }
+.pasos img { height: 120px; width: auto; border: 0; border-radius: 0; }
+.pasos h3 { margin: .5rem 0 .25rem; font-size: 1.2rem; }
+.pasos p { margin: 0; color: var(--apagado); }
+.funciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.funciones article { background: #fff; border: 1.5px solid var(--borde); border-radius: 14px; padding: 1rem 1.1rem; }
+.funciones h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+.funciones p { margin: 0; color: var(--apagado); }
+.sellos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+.sellos li { background: var(--menta); color: var(--tinta); border-radius: 2rem; padding: .5rem 1.1rem; font-weight: 600; }
+.estrecho details { margin-bottom: .6rem; }
+@media (max-width: 600px) { .menu a { display: none; } .cta-mini { white-space: nowrap; } .hero-texto { text-align: center; } .lema, .pie-cta { margin-inline: auto; } }

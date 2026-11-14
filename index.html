@@ -29,6 +29,7 @@
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"RicoRico","operatingSystem":"Android","applicationCategory":"LifestyleApplication","inLanguage":"es","url":"https://5pabos.github.io/ricorico-web/","image":"https://5pabos.github.io/ricorico-web/img/icono-192.png","description":"Escanea el ticket de la compra, lleva el inventario de tu cocina y descubre qué cocinar con lo que tienes."}
 </script>
 <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
 <a class="saltar" href="#principal">Saltar al contenido</a>
@@ -37,130 +38,117 @@
     <a class="marca" href="./">RicoRico</a>
     <nav class="menu" aria-label="Principal">
       <a href="#funciones">Funciones</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#preguntas">Preguntas</a>
+      <!-- Cuando la app esté publicada: cambiar «Muy pronto» por «Descargar» y poner el enlace de Google Play -->
+      <span class="cta cta-mini" role="note">Muy pronto</span>
     </nav>
   </div>
 </header>
 
 <main id="principal">
   <section class="portada">
-    <div class="contenedor">
-      <img src="img/icono-192.png" width="96" height="96" fetchpriority="high" decoding="async" alt="Icono de RicoRico: un muslo de pollo">
-      <h1>RicoRico</h1>
-      <p class="lema">Escanea tu ticket y descubre qué cocinar con lo que tienes</p>
-      <!-- Cuando la app esté publicada: cambiar este <span> por <a class="cta" href="ENLACE-DE-GOOGLE-PLAY">Descargar en Google Play</a> -->
-      <span class="cta" role="note">Muy pronto en Google Play</span>
-      <p class="pie-cta">Sin cuentas · Todo se guarda en tu móvil</p>
+    <div class="contenedor hero">
+      <div class="hero-texto">
+        <h1>Tu cocina, sin desperdicio</h1>
+        <p class="lema">Escanea tu ticket y descubre qué cocinar con lo que tienes</p>
+        <!-- Cuando la app esté publicada: cambiar este <span> por <a class="cta" href="ENLACE-DE-GOOGLE-PLAY">Descargar en Google Play</a> -->
+        <span class="cta" role="note">Muy pronto en Google Play</span>
+        <p class="pie-cta">100% gratis, sin anuncios · Hecho en España</p>
+        <p class="pie-cta">Úsala sin registrarte. Entra con Google para compartir tu despensa y guardar tus datos en la nube <span class="pronto">(próximamente)</span>.</p>
+      </div>
+      <div class="hero-rico">
+        <p class="globo">¡Hola! ¿Qué cocinamos hoy?</p>
+        <img src="mascota/saludando.svg" width="216" height="248" fetchpriority="high" decoding="async" alt="Rico, la mascota de RicoRico: un muslito de pollo con gorro de cocinero, saludando">
+      </div>
     </div>
-    <!-- Los 7 estados del muslito (hueso, crudo, hecho, fuego, oro, quemado, mordido) dando vueltas: decorativo, solo con el recorrido activo (ver estilo.css) -->
-    <div class="orbita" aria-hidden="true">
-      <div class="elipse"><div class="anillo">
-        <span class="muslo" style="--n:0"><img src="img/muslo-hueso.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:1"><img src="img/muslo-crudo.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:2"><img src="img/muslo-hecho.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:3"><img src="img/muslo-fuego.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:4"><img src="img/muslo-oro.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:5"><img src="img/muslo-quemado.svg" alt="" width="56" height="56"></span>
-        <span class="muslo" style="--n:6"><img src="img/muslo-mordido.svg" alt="" width="56" height="56"></span>
-      </div></div>
+    <!--
+      CAPTURAS REALES: pon las 5 capturas en img/capturas/ (inventario, escanear, apetece, compra, cocinar; WebP o PNG de unos 540 x 1140)
+      y en cada <li> de abajo cambia el <img src="mascota/..."> por <img class="captura" src="img/capturas/NOMBRE.webp" width="270" height="570" loading="lazy" alt="Descripción">.
+    -->
+    <div class="contenedor">
+      <ul class="carrusel" aria-label="Pantallas de la app (desliza)">
+        <li><figure class="movil"><div class="pantalla"><img src="mascota/lista.svg" width="150" height="172" alt=""></div><figcaption>Inventario</figcaption></figure></li>
+        <li><figure class="movil"><div class="pantalla"><img src="mascota/pensando.svg" width="150" height="172" alt=""></div><figcaption>Escanear el ticket</figcaption></figure></li>
+        <li><figure class="movil"><div class="pantalla"><img src="mascota/cocinando.svg" width="150" height="172" alt=""></div><figcaption>¿Qué te apetece?</figcaption></figure></li>
+        <li><figure class="movil"><div class="pantalla"><img src="mascota/lista.svg" width="150" height="172" alt=""></div><figcaption>Lista de la compra</figcaption></figure></li>
+        <li><figure class="movil"><div class="pantalla"><img src="mascota/celebrando.svg" width="150" height="172" alt=""></div><figcaption>Modo cocinar</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="como-tu">
+    <div class="contenedor">
+      <h2>Como tú</h2>
+      <p class="sub">Toca la tuya.</p>
+      <div class="situaciones">
+        <details><summary>Tiro comida sin querer</summary><p>Rico te avisa de lo que caduca pronto y te propone platos para gastarlo antes.</p></details>
+        <details><summary>Nunca sé qué cenar</summary><p>Con lo que tienes en casa, la app te enseña qué puedes cocinar ahora y qué te falta para otros platos.</p></details>
+        <details><summary>Vivo en un piso compartido</summary><p>Pensada para compartir la cocina entre varios móviles <span class="pronto">(próximamente)</span>.</p></details>
+        <details><summary>Quiero ahorrar en la compra</summary><p>Compras solo lo que falta y ves un precio estimado antes de ir al súper.</p></details>
+        <details><summary>Como vegetariano</summary><p>Filtros de dieta y alérgenos (orientativos) para ver solo recetas que te encajan.</p></details>
+        <details><summary>Cocino para la familia</summary><p>Elige de 1 a 5 personas y las cantidades de la receta se ajustan solas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion fondo" id="como-funciona">
+    <div class="contenedor">
+      <h2>Cómo funciona</h2>
+      <ol class="pasos">
+        <li><img src="mascota/lista.svg" width="108" height="124" loading="lazy" alt=""><h3>Escanea tu ticket</h3><p>La app lee el ticket en tu móvil, guarda los productos y borra la foto.</p></li>
+        <li><img src="mascota/cocinando.svg" width="128" height="124" loading="lazy" alt=""><h3>Cocina con lo que tienes</h3><p>Te propone recetas con tu inventario y, al cocinar, resta lo que gastas.</p></li>
+        <li><img src="mascota/celebrando.svg" width="112" height="132" loading="lazy" alt=""><h3>Compra solo lo que falta</h3><p>Tu lista de la compra, con un precio estimado.</p></li>
+      </ol>
     </div>
   </section>
 
   <section class="seccion" id="funciones">
-    <div class="recorrido">
-      <div class="escenario">
-        <h2 class="titulo-escenario">Lo que hace por ti</h2>
-        <div class="mundo">
-          <article class="escena" style="--i:0; --x:-2vw; --r:4deg">
-            <div class="panel">
-              <div class="arte arte-escaner" aria-hidden="true">
-                <div class="ticket"></div><div class="barra"></div>
-                <span class="chip c1">Leche</span><span class="chip c2">Tomates</span><span class="chip c3">Pasta</span>
-              </div>
-              <h3>Escanea tu ticket</h3>
-              <p>La app lee el ticket en tu móvil, añade los productos y borra la foto.</p>
-            </div>
-          </article>
-          <article class="escena" style="--i:1; --x:2vw; --r:-4deg">
-            <div class="panel">
-              <div class="arte arte-nevera" aria-hidden="true">
-                <div class="disco"><svg viewBox="0 0 24 24"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z M6 10h12 M9 6.5v1.5 M9 13v3"/></svg></div>
-                <span class="chip c1 ok">Leche · 3 días</span><span class="chip c2 aviso">Pollo · hoy</span><span class="chip c3 ok">Yogures · 6 días</span>
-              </div>
-              <h3>Inventario que se actualiza solo</h3>
-              <p>Nevera, congelador y despensa con cuenta atrás de caducidad y avisos.</p>
-            </div>
-          </article>
-          <article class="escena" style="--i:2; --x:-2vw; --r:4deg">
-            <div class="panel">
-              <div class="arte arte-recetas" aria-hidden="true">
-                <span class="chip c1">Tortilla de patatas<small>40 min</small></span>
-                <span class="chip c2">Macarrones con tomate<small>20 min</small></span>
-                <span class="chip c3">Pollo al curry<small>35 min</small></span>
-              </div>
-              <h3>Recetas con lo que tienes</h3>
-              <p>Más de 150 recetas con foto, ajustadas a las personas y a tus cantidades.</p>
-            </div>
-          </article>
-          <article class="escena" style="--i:3; --x:2vw; --r:-4deg">
-            <div class="panel">
-              <div class="arte arte-lista" aria-hidden="true">
-                <span class="fila f1"><i></i>Leche</span><span class="fila f2"><i></i>Huevos</span><span class="fila f3"><i></i>Tomates</span>
-                <span class="chip c3 ok">Precio estimado ≈ 24,50 €</span>
-              </div>
-              <h3>Lista de la compra con precio estimado</h3>
-              <p>Lo que falta de tus recetas, con un precio orientativo.</p>
-            </div>
-          </article>
-        </div>
-        <p class="pista" aria-hidden="true">Sigue bajando</p>
+    <div class="contenedor">
+      <h2>Lo que hace por ti</h2>
+      <div class="funciones">
+        <article><h3>Inventario</h3><p>Nevera, congelador y despensa con cuenta atrás de caducidad.</p></article>
+        <article><h3>Recetas</h3><p>Más de 150 recetas con foto, ajustadas a las personas y a tus cantidades.</p></article>
+        <article><h3>¿Qué te apetece?</h3><p>Cartas para elegir platos y apuntar a la compra lo que falta.</p></article>
+        <article><h3>Lista con precio estimado</h3><p>Lo que falta, ordenado por secciones del súper y con precio orientativo.</p></article>
+        <article><h3>Aprovecha las sobras</h3><p>Lo que sobra de un plato se guarda y se convierte en otro.</p></article>
+        <article><h3>Logros</h3><p>Rachas e insignias por cocinar y no tirar comida. Sin castigos.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="seccion" id="recetas">
-    <div class="contenedor">
-      <div class="tarjeta-grande">
-        <span class="pildora">Recetas con foto</span>
-        <div class="escena3d">
-          <div class="abanico">
-            <figure class="plato" style="--i:0"><img src="img/recetas-portada/1.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tortilla de patatas"><figcaption>Tortilla de patatas · 40 min</figcaption></figure>
-            <figure class="plato" style="--i:1"><img src="img/recetas-portada/3.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Macarrones con tomate"><figcaption>Macarrones con tomate · 20 min</figcaption></figure>
-            <figure class="plato" style="--i:2"><img src="img/recetas-portada/65.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Paella sencilla de pollo"><figcaption>Paella sencilla · 50 min</figcaption></figure>
-            <figure class="plato" style="--i:3"><img src="img/recetas-portada/51.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Pollo al curry"><figcaption>Pollo al curry · 35 min</figcaption></figure>
-            <figure class="plato" style="--i:4"><img src="img/recetas-portada/129.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tortitas americanas"><figcaption>Tortitas americanas · 20 min</figcaption></figure>
-            <figure class="plato" style="--i:5"><img src="img/recetas-portada/132.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Tacos de pollo"><figcaption>Tacos de pollo · 25 min</figcaption></figure>
-            <figure class="plato" style="--i:6"><img src="img/recetas-portada/138.jpg" width="360" height="480" loading="lazy" decoding="async" alt="Shakshuka, huevos en salsa de tomate"><figcaption>Shakshuka · 25 min</figcaption></figure>
-          </div>
-        </div>
-      </div>
-      <h2 class="titulo-grande">Cocina lo que ya tienes en casa</h2>
-      <p class="sub-grande">Más de 150 recetas con foto, para 1 a 5 personas, que se ajustan a tus cantidades.</p>
+  <section class="seccion fondo" id="casas">
+    <div class="contenedor centro">
+      <h2>Para casas compartidas <span class="pronto">(próximamente)</span></h2>
+      <p>Una cocina, varios móviles: todos ven el mismo inventario y la misma lista de la compra.</p>
     </div>
   </section>
 
-  <!--
-    SECCIÓN «ASÍ SE VE» OCULTA hasta tener capturas reales de la app (los huecos de texto restaban confianza). Para activarla:
-    1) copia las capturas a img/capturas/ (WebP, 270 × 570);
-    2) quita este comentario y sustituye cada <div class="hueco">…</div> por <img src="img/capturas/NOMBRE.webp" width="270" height="570" loading="lazy" alt="Descripción de la pantalla">;
-    3) vuelve a poner en el menú de arriba el enlace <a href="#capturas">Capturas</a>.
-
-  <section class="seccion capturas-fondo" id="capturas">
+  <section class="seccion" id="confianza">
     <div class="contenedor">
-      <h2>Así se ve</h2>
-      <ul class="capturas">
-        <li><figure><div class="hueco">Captura 01-inventario</div><figcaption>Inventario</figcaption></figure></li>
-        <li><figure><div class="hueco">Captura 02-recetas</div><figcaption>Recetas</figcaption></figure></li>
-        <li><figure><div class="hueco">Captura 03-lista-compra</div><figcaption>Lista de la compra</figcaption></figure></li>
-        <li><figure><div class="hueco">Captura 04-escaner</div><figcaption>Escáner de tickets</figcaption></figure></li>
+      <ul class="sellos">
+        <li>100% gratis, sin anuncios</li>
+        <li>Hecho en España, para supermercados españoles</li>
+        <li>Todo se guarda en tu móvil</li>
       </ul>
+      <!-- Opiniones reales: cuando haya testers que quieran, ponerlas aquí con su permiso. No inventar nombres ni cifras. -->
     </div>
   </section>
-  -->
+
+  <section class="seccion fondo" id="preguntas">
+    <div class="contenedor estrecho">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Es gratis?</summary><p>Sí.</p></details>
+      <details><summary>¿Necesito una cuenta?</summary><p>No. Solo si quieres compartir tu despensa o guardar tus datos en la nube <span class="pronto">(próximamente)</span>.</p></details>
+      <details><summary>¿Qué hacéis con mis datos?</summary><p>Se guardan en tu móvil, sin servidor ni cuentas. De cada ticket solo queda el texto: la foto se borra. Si activas la nube o compartes casa, la app te lo explicará antes. Más detalle en la <a href="privacidad.html">política de privacidad</a>.</p></details>
+    </div>
+  </section>
 
   <section class="seccion" id="contacto">
-    <div class="contenedor" style="text-align:center">
-      <h2>Contacto</h2>
+    <div class="contenedor centro">
+      <img src="mascota/nevera-vacia.svg" width="148" height="124" loading="lazy" alt="Rico mirando con apuro una nevera vacía">
+      <h2>¿Nevera vacía? Empieza por el ticket</h2>
+      <span class="cta" role="note">Muy pronto en Google Play</span>
       <p>¿Dudas, ideas o algo que no funciona? Escríbenos:
         <a class="correo" data-u="appricorico" data-d="gmail.com" href="#contacto">appricorico (arroba) gmail.com</a></p>
     </div>
@@ -178,6 +166,5 @@
   </div>
 </footer>
 <script src="js/contacto.js" defer></script>
-<script src="js/efectos.js" defer></script>
 </body>
 </html>
