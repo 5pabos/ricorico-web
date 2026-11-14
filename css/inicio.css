@@ -68,3 +68,5 @@ details p { margin: .5rem 0 0; color: var(--apagado); }
 }
 @keyframes globo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @media (prefers-reduced-motion: reduce) { .hero-rico img, .globo { animation: none; } }
+.globo { display: table; margin: 0 auto .5rem; }
+.hero-rico img { display: block; margin-inline: auto; }
