@@ -33,3 +33,24 @@ Tutea. Español de España, sencillo. Exclamaciones con medida. Juegos de palabr
 ## Poses (carpeta `mascota/`)
 `saludando.svg` (a mano), `cocinando.svg`, `pensando.svg`, `celebrando.svg`, `lista.svg`, `nevera-vacia.svg`.
 Las cinco últimas se generan con `python mascota/generar_poses.py`; si se cambia el cuerpo o la cara, se cambia ahí y se regeneran todas.
+
+## Rico en los errores
+Siempre se dice **qué ha pasado** y **qué puede hacer la persona** (volver al inicio, pedir un enlace nuevo, comprobar la conexión). Nunca textos técnicos.
+
+**Cuándo SÍ hay humor (suave, una frase como máximo):** cosas sin consecuencias: página 404, ticket que no se lee, búsqueda de recetas sin resultados, sin internet al sincronizar la casa, enlace de «confirmar correo» caducado, usado o roto.
+**Cuándo NO hay humor:** seguridad y dinero (contraseña, cambio de correo, entrar, borrar la cuenta, pagos, Premium, regalos), copias de seguridad, datos que no se guardan, borrados. Ahí Rico, como mucho, sale pequeño de adorno y el texto es claro y serio.
+
+### Frases aprobadas
+**404 (una al azar en cada visita):**
+1. Aquí no hay nada… ni siquiera un yogur caducado.
+2. Esta página se ha ido de compras y todavía no ha vuelto.
+3. He mirado en toda la nevera y esta página no está.
+4. Hmm… esto no sale en ninguna receta que yo conozca.
+5. A todos se nos olvida algo al fondo de la nevera. A esta página, también.
+Debajo, siempre en claro: «Esta página no existe o se ha movido», con «Volver al inicio» y «Descargar RicoRico». Pose: Rico ante la nevera vacía.
+
+**Enlace de confirmar correo (humor suave):** caducado «Uy, a este enlace se le pasó el punto.» · ya usado «¡Repetir plato no vale!» · no válido «No me suena este enlace… ¿lo copiaste entero?»
+**Enlaces de contraseña y cambio de correo:** sin frases de Rico (solo el mensaje claro y Rico pequeño).
+**Mensajes claros de los enlaces:** caducado «Este enlace ya ha caducado (duran 30 minutos). Pide uno nuevo desde la app.» · usado «Este enlace ya se ha usado. Si ya confirmaste, todo está bien.» · no válido «Este enlace no es válido. Pide uno nuevo desde la app.»
+
+**En la app:** ticket que no se lee «Hmm… este ticket se me resiste. Prueba otra vez con más luz y bien plano.» · recetas sin resultado «No encuentro «x» en mis recetas… ¿probamos con otra palabra?» · sin internet al sincronizar «Sin internet por ahora; yo sigo intentándolo.»
